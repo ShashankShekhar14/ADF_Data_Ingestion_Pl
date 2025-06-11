@@ -1,6 +1,5 @@
 {
 	"name": "HttplinktoSEC",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "HttpServer",
@@ -10,14 +9,23 @@
 			"authenticationType": "Anonymous",
 			"authHeaders": {
 				"User-Agent": {
-					"type": "SecureString",
-					"value": "**********"
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "AKV_header_credentials",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "User-Agent"
 				},
 				"Accept-Encoding": {
-					"type": "SecureString",
-					"value": "**********"
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "AKV_header_credentials",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "Accept-Encoding"
 				}
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
