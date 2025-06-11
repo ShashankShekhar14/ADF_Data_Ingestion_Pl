@@ -1,0 +1,22 @@
+{
+	"name": "ds_binary_getmetadata_zip_matadata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat(string(formatDateTime(utcNow(), 'yyyy')), 'q', string(div(add(int(formatDateTime(utcNow(), 'MM')), 2), 3)))",
+					"type": "Expression"
+				},
+				"fileSystem": "zip-financial-data"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

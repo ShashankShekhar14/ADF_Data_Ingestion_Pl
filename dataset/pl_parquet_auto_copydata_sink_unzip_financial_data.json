@@ -1,0 +1,24 @@
+{
+	"name": "pl_parquet_auto_copydata_sink_unzip_financial_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat(string(formatDateTime(utcNow(), 'yyyy')), 'q', string(div(add(int(formatDateTime(utcNow(), 'MM')), 2), 3)))",
+					"type": "Expression"
+				},
+				"fileSystem": "unzip-financial-data"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

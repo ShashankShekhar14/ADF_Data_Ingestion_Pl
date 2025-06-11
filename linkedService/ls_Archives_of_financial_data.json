@@ -1,0 +1,12 @@
+{
+	"name": "ls_Archives_of_financial_data",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://archivesecfinancialdata.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEJEODQyREYwLTQxMDEtNEI1Qy1CRkEyLUE0MTE5MjYxMkMxRl82OWE0MjMxOS00Y2I4LTRmZGUtOTQ5NC1lNjQxNDQ2NjU2MmEiDQp9"
+		}
+	}
+}

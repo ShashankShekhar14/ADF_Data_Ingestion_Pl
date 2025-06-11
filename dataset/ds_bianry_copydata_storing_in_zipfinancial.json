@@ -1,0 +1,30 @@
+{
+	"name": "ds_bianry_copydata_storing_in_zipfinancial",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"year": {
+				"type": "string"
+			},
+			"quarter": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@{concat(dataset().year, 'q', dataset().quarter)}",
+					"type": "Expression"
+				},
+				"fileSystem": "zip-financial-data"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

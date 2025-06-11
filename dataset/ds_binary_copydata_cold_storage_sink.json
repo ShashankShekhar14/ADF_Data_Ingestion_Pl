@@ -1,0 +1,18 @@
+{
+	"name": "ds_binary_copydata_cold_storage_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Archives_of_financial_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "text-financial-data"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
