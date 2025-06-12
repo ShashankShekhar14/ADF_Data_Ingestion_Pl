@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-b101"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"ls_Archives_of_financial_data_accountKey": {
+			"value": ""
+		},
+		"AKV_header_credentials_properties_typeProperties_baseUrl": {
+			"value": "https://kv-b1.vault.azure.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storageaccb1.dfs.core.windows.net/"
+		},
+		"HttplinktoSEC_properties_typeProperties_url": {
+			"value": "https://www.sec.gov/files/dera/data/financial-statement-data-sets/"
+		},
+		"ls_Archives_of_financial_data_properties_typeProperties_url": {
+			"value": "https://archivesecfinancialdata.dfs.core.windows.net/"
+		}
+	}
+}
