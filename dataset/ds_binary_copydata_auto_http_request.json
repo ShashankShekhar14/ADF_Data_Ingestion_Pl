@@ -11,7 +11,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(\n    string(\n        if(equals(formatDateTime(utcNow(), 'MM'), '01'),\n           sub(int(formatDateTime(utcNow(), 'yyyy')), 1),\n           int(formatDateTime(utcNow(), 'yyyy'))\n        )\n    ),\n    'q',\n    string(\n        if(equals(formatDateTime(utcNow(), 'MM'), '01'),\n           4,\n           div(add(int(formatDateTime(utcNow(), 'MM')), 2), 3)\n        )\n    ),\n    '.zip'\n)\n",
+					"value": "@concat(\n    string(\n        if(equals(formatDateTime(utcNow(), 'MM'), '01'),\n           sub(int(formatDateTime(utcNow(), 'yyyy')), 1),\n           int(formatDateTime(utcNow(), 'yyyy'))\n        )\n    ),\n    'q',\n    string(\n        if(equals(formatDateTime(utcNow(), 'MM'), '01'),\n           4,\n           div(add(int(formatDateTime(utcNow(), 'MM')), 2), 4)\n        )\n    ),\n    '.zip'\n)\n",
 					"type": "Expression"
 				}
 			},

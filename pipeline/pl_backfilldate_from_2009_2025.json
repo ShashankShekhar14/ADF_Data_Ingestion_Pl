@@ -33,7 +33,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@range(pipeline().parameters.startYear, add(sub(pipeline().parameters.endYear, pipeline().parameters.startYear), 1))",
+						"value": "@variables('yearList')",
 						"type": "Expression"
 					},
 					"isSequential": true,
